@@ -78,12 +78,9 @@ dependencies {
     kapt(libs.dagger.kapt)
 
     //room
-    /*implementation(libs.androidx.room.ktx)
-    implementation(libs.androidx.room.compiler)
+    kapt(libs.androidx.room.compiler)
     implementation(libs.androidx.room.runtime)
-
-    //data-store
-    implementation(libs.datastore.preferences)*/
+    implementation(libs.androidx.room.ktx)
 
     //splashscreen
     implementation(androidxCoreSplashscreen)
