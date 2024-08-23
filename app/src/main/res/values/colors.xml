@@ -7,4 +7,8 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="color_primary">#4CAF50</color> <!-- Bright green -->
+    <color name="color_on_primary">#FFFFFF</color> <!-- White for text -->
+    <color name="color_surface">#121212</color> <!-- Dark surface for dark mode -->
+    <color name="color_on_surface">#B0B0B0</color> <!-- Light gray for dark mode -->
 </resources>

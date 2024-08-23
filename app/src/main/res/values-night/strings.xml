@@ -1,4 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="list_screen_title">Tasks</string>
+    <string name="app_name">ToDoApp</string>
+    <string name="search_hint">Search TODOs</string>
+    <string name="enter_todo_label">Enter TODO</string>
+    <string name="add_todo_button">Add TODO</string>
+    <string name="empty_list_message">Press the + button to add a TODO item</string>
+    <string name="error_message">Failed to add TODO</string>
+    <string name="add_todo_title">Add TODO</string>
+    <string name="back_button">Back</string>
+    <string name="failed_to_add_todo">Failed to add TODO</string>
+    <string name="dismiss">Dismiss</string>
 </resources>
