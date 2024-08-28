@@ -2,11 +2,10 @@ package com.example.todoapp.viewmodel
 
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import com.example.todoapp.R
-import com.example.todoapp.data.local.entity.ToDoEntity
-import com.example.todoapp.di.ResourceProvider
-import com.example.todoapp.domain.usecases.AddToDoUseCase
-import com.example.todoapp.domain.usecases.GetToDoUseCase
-import com.example.todoapp.presentation.viewmodel.SharedViewModel
+import com.example.data.local.entity.ToDoEntity
+import com.example.domain.usecases.AddToDoUseCase
+import com.example.domain.usecases.GetToDoUseCase
+import com.example.presentation.viewmodel.SharedViewModel
 import com.example.todoapp.utils.Constants.ERROR_TEXT
 import junit.framework.TestCase.assertEquals
 import junit.framework.TestCase.assertNull

@@ -2,11 +2,13 @@ package com.example.todoapp.di
 
 import android.content.Context
 import androidx.room.Room
-import com.example.todoapp.data.local.ToDoDatabase
-import com.example.todoapp.data.repository.ToDoRepository
-import com.example.todoapp.domain.usecases.AddToDoUseCase
-import com.example.todoapp.domain.usecases.GetToDoUseCase
-import com.example.todoapp.utils.Constants.DATABASE_NAME
+import com.example.core.ui.theme.Constants.DATABASE_NAME
+import com.example.core.ui.theme.ResourceProvider
+import com.example.core.ui.theme.ResourceProviderImpl
+import com.example.data.local.ToDoDatabase
+import com.example.data.repository.ToDoRepository
+import com.example.domain.usecases.AddToDoUseCase
+import com.example.domain.usecases.GetToDoUseCase
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -22,9 +24,7 @@ object AppModule {
     @Singleton
     fun provideDatabase(@ApplicationContext appContext: Context): ToDoDatabase {
         return Room.databaseBuilder(
-            appContext,
-            ToDoDatabase::class.java,
-            DATABASE_NAME
+            appContext, ToDoDatabase::class.java, DATABASE_NAME
         ).build()
     }
 

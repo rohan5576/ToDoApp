@@ -13,6 +13,7 @@ android {
     defaultConfig {
         applicationId = "com.example.todoapp"
         minSdk = 24
+        //noinspection OldTargetApi
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"
@@ -44,7 +45,7 @@ android {
         buildConfig = true
     }
     composeOptions {
-        kotlinCompilerExtensionVersion = "1.5.1"
+        kotlinCompilerExtensionVersion = "1.0.1"
     }
     packaging {
         resources {
@@ -55,15 +56,20 @@ android {
 val androidxCoreSplashscreen by extra { "androidx.core:core-splashscreen:1.0.0" }
 
 dependencies {
-
+    implementation(project(":core"))
+    implementation(project(":data"))
+    implementation(project(":domain"))
+    implementation(project(":presentation"))
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.activity.compose)
-    implementation(platform(libs.androidx.compose.bom))
+    // Jetpack Compose BOM
+    implementation(libs.androidx.compose.bom)
+    implementation("androidx.compose.runtime:runtime:1.6.8")
     implementation(libs.androidx.ui)
     implementation(libs.androidx.ui.graphics)
     implementation(libs.androidx.ui.tooling.preview)
-    implementation(libs.androidx.material3)
+    implementation(libs.androidx.material3.android)
     testImplementation(libs.junit)
     testImplementation(libs.mockito.core)
     testImplementation(libs.mockito.inline)
@@ -80,11 +86,10 @@ dependencies {
     implementation(libs.androidx.hilt.compose)
     kapt(libs.dagger.kapt)
 
-    //room
-    kapt(libs.androidx.room.compiler)
+//room
+    ksp(libs.androidx.room.compiler)
     implementation(libs.androidx.room.runtime)
     implementation(libs.androidx.room.ktx)
-
     //splashscreen
     implementation(androidxCoreSplashscreen)
 
@@ -92,4 +97,8 @@ dependencies {
     //navigation compose
     implementation(libs.androidx.navigation.compose)
 
+}
+
+kapt {
+    correctErrorTypes = true
 }

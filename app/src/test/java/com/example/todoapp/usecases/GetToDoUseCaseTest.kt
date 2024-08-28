@@ -1,8 +1,8 @@
 package com.example.todoapp.usecases
 
-import com.example.todoapp.data.local.entity.ToDoEntity
+import com.example.data.local.entity.ToDoEntity
 import com.example.todoapp.data.repository.ToDoRepository
-import com.example.todoapp.domain.usecases.GetToDoUseCase
+import com.example.domain.usecases.GetToDoUseCase
 import junit.framework.TestCase.assertEquals
 import kotlinx.coroutines.flow.flowOf
 import kotlinx.coroutines.flow.toList

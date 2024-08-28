@@ -1,7 +1,7 @@
 package com.example.todoapp.data
 
-import com.example.todoapp.data.local.dao.ToDoDao
-import com.example.todoapp.data.local.entity.ToDoEntity
+import com.example.data.local.dao.ToDoDao
+import com.example.data.local.entity.ToDoEntity
 import com.example.todoapp.data.repository.ToDoRepository
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.flow.flowOf

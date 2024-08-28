@@ -1,6 +1,6 @@
-import com.example.todoapp.data.local.entity.ToDoEntity
+import com.example.data.local.entity.ToDoEntity
 import com.example.todoapp.data.repository.ToDoRepository
-import com.example.todoapp.domain.usecases.AddToDoUseCase
+import com.example.domain.usecases.AddToDoUseCase
 import kotlinx.coroutines.runBlocking
 import org.junit.Before
 import org.junit.Test
